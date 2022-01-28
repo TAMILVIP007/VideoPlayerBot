@@ -16,6 +16,7 @@ You should have received a copy of the GNU Affero General Public License
 along with this program.  If not, see <https://www.gnu.org/licenses/>
 """
 
+
 import os
 from os import getenv
 from dotenv import load_dotenv
@@ -33,8 +34,7 @@ SUPPORT_GROUP = getenv("SUPPORT_GROUP", "AsmSupport")
 UPDATES_CHANNEL = getenv("UPDATES_CHANNEL", "AsmSafone")
 ASSISTANT_NAME = getenv("ASSISTANT_NAME", "MyVideoPlayer")
 SUDO_USERS = list(map(int, getenv("SUDO_USERS").split()))
-REPLY_MESSAGE = getenv("REPLY_MESSAGE", "")
-if REPLY_MESSAGE:
+if REPLY_MESSAGE := getenv("REPLY_MESSAGE", ""):
     REPLY_MESSAGE = REPLY_MESSAGE
 else:
     REPLY_MESSAGE = None

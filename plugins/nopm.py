@@ -45,4 +45,3 @@ async def nopm(client, message):
             await message.reply_text(f"{REPLY_MESSAGE}\n\n<b>© Powered By : \n@AsmSafone | @AsmSupport 👑</b>")
         except Exception as e:
             print(e)
-            pass
